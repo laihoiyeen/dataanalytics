@@ -10,7 +10,7 @@ df = pd.read_csv(file)
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
-st.header("My first Streamlit App for Mall Dataset")
+st.header("Kmean Cluster Dataset")
 
 option = st.sidebar.selectbox(
     'Select a mini project',
