@@ -5,32 +5,25 @@ from sklearn.cluster import KMeans
 from sklearn import datasets
 import plotly.tools
 
-#Load file
 file = "mall_customer.csv"
 df = pd.read_csv(file)
 
-#To avoid showing the warning sign
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
-#Big title
 st.header("My first Streamlit App for Mall Dataset")
 
-#For interactive purposes
 option = st.sidebar.selectbox(
     'Select a mini project',
      ['Whole data', 'Description','KMeans cluster'])
 
-#Shows the whole data
 if option=='Whole data':
     whole = df
     st.table(whole)
 
-#Shows the description table
 elif option=='Description':
     chart_data = df.describe()
     st.table(chart_data)
     
-#shows the kMeans Cluster plot-can start here without "else" if want to show static plot
 else:
     st.write("KMeans Cluster Plot")
     #Preprocessing
