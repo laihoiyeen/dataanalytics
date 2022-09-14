@@ -1,3 +1,5 @@
+st.write("The Kmean cluster")
+
 file = "mall_customer.csv"
 import pandas as pd
 df = pd.read_csv(file)
